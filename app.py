@@ -52,7 +52,7 @@ st.plotly_chart(fig_hist)
 
 # Distribution of Categorical Features
 st.header('Distribution of Categorical Features')
-categorical_cols_display = ['payment_method', 'gender', 'income_level']
+display = ['payment_method', 'gender', 'income_level']
 selected_categorical_col = st.selectbox('Select a categorical feature:', categorical_cols_display)
 
 # Need to get the original categorical data before one-hot encoding for count plots
@@ -62,5 +62,5 @@ selected_categorical_col = st.selectbox('Select a categorical feature:', categor
 #datos_original_categorical = datos.drop(['user_id', 'product_id'], axis=1)
 
 
-fig_count = px.histogram(datos, x=categorical_cols_display, title=f'Count of {selected_categorical_col}')
+fig_count = px.histogram(datos, x=display, title=f'Count of {selected_categorical_col}')
 st.plotly_chart(fig_count)
