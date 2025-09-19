@@ -59,7 +59,7 @@ selected_categorical_col = st.selectbox('Select a categorical feature:', categor
 # Reloading a small part of the data just for categorical counts for display purposes
 # In a real app, you might want to store the original categorical data
 #datos_original_categorical = pd.read_csv('consumer_behavior_dataset.csv')
-datos_original_categorical = datos.drop(['user_id', 'product_id'], axis=1)
+#datos_original_categorical = datos.drop(['user_id', 'product_id'], axis=1)
 
 
 fig_count = px.histogram(datos_original_categorical, x=selected_categorical_col, title=f'Count of {selected_categorical_col}')
