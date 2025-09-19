@@ -58,7 +58,7 @@ selected_categorical_col = st.selectbox('Select a categorical feature:', categor
 # Need to get the original categorical data before one-hot encoding for count plots
 # Reloading a small part of the data just for categorical counts for display purposes
 # In a real app, you might want to store the original categorical data
-datos_original_categorical = pd.read_csv('/consumer_behavior_dataset.csv')
+datos_original_categorical = pd.read_csv('consumer_behavior_dataset.csv')
 datos_original_categorical = datos_original_categorical.drop(['user_id', 'product_id'], axis=1)
 
 
