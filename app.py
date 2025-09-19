@@ -53,7 +53,7 @@ st.plotly_chart(fig_hist)
 # Distribution of Categorical Features
 st.header('Distribution of Categorical Features')
 display = ['payment_method', 'gender', 'income_level']
-selected_categorical_col = st.selectbox('Select a categorical feature:', categorical_cols_display)
+selected_categorical_col = st.selectbox('Select a categorical feature:', display)
 
 # Need to get the original categorical data before one-hot encoding for count plots
 # Reloading a small part of the data just for categorical counts for display purposes
