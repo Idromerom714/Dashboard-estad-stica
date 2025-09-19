@@ -54,7 +54,7 @@ st.plotly_chart(fig_hist)
 st.header('Distribution of Categorical Features')
 categorical_cols_display = ['payment_method', 'gender', 'income_level']
 selected_categorical_col = st.selectbox('Select a categorical feature:', categorical_cols_display)
-datos_original_categorical = pd.read_csv('/content/drive/MyDrive/consumer_behavior_dataset.csv')
+datos_original_categorical = pd.read_csv('consumer_behavior_dataset.csv')
 datos_original_categorical = datos_original_categorical.drop(['user_id', 'product_id'], axis=1)
 
 
