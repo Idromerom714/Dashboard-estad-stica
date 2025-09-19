@@ -5,7 +5,7 @@ import pandas as pd
 # Load or regenerate the dataframes
 # Assuming the data is available at this path or can be re-read
 try:
-    datos = pd.read_csv('/consumer_behavior_dataset.csv')
+    datos = pd.read_csv('consumer_behavior_dataset.csv')
     datos = datos.drop(['user_id', 'product_id'], axis=1)
     datos['purchase_date'] = pd.to_datetime(datos['purchase_date'])
     datos['purchase_month'] = datos['purchase_date'].dt.month
