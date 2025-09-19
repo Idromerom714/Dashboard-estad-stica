@@ -52,15 +52,11 @@ st.plotly_chart(fig_hist)
 
 # Distribution of Categorical Features
 st.header('Distribution of Categorical Features')
-display = ['payment_method', 'gender', 'income_level']
-selected_categorical_col = st.selectbox('Select a categorical feature:', display)
-
-# Need to get the original categorical data before one-hot encoding for count plots
-# Reloading a small part of the data just for categorical counts for display purposes
-# In a real app, you might want to store the original categorical data
-#datos_original_categorical = pd.read_csv('consumer_behavior_dataset.csv')
-#datos_original_categorical = datos.drop(['user_id', 'product_id'], axis=1)
+categorical_cols_display = ['payment_method', 'gender', 'income_level']
+selected_categorical_col = st.selectbox('Select a categorical feature:', categorical_cols_display)
+datos_original_categorical = pd.read_csv('/content/drive/MyDrive/consumer_behavior_dataset.csv')
+datos_original_categorical = datos_original_categorical.drop(['user_id', 'product_id'], axis=1)
 
 
-fig_count = px.bar(datos, x=selected_categorical_col, title=f'Count of {selected_categorical_col}')
+fig_count = px.bar(datos_original_categorical,x=selected_categorical_col,title=f'Count of {selected_categorical_col}')
 st.plotly_chart(fig_count)
